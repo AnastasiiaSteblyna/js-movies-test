@@ -120,8 +120,10 @@ input {
   justify-content: space-around;
   margin-bottom: 54px;
 
-  @media screen and (min-width: 1260px) {
+  @media screen and (min-width: 1280px) {
     justify-content: space-between;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }
 

@@ -9,21 +9,19 @@ export function renderGallery(data) {
     .map(
       hit =>
         `<div class="photo-card">
-      <a href=${hit.largeImageURL} >
-      <img src=${hit.webformatURL} alt="${hit.tags}" loading="lazy" title="${hit.tags}"/></a>
+      
+        <a class="photo" href=${hit.largeImageURL} >
+           <img  src=${hit.webformatURL} alt="${hit.tags}" loading="lazy" title="${hit.tags}"/></a>
       <div class="info">
-      <p class="info-item">
-      <b>Likes</b>
-      ${hit.likes}</p>
-      <p class="info-item">
-      <b>Views</b>
-      ${hit.views}</p>
-      <p class="info-item">
-      <b>Comments</b>
+      <p class="info-name">
+      Film name ${hit.views}</p>
+      <div class="info-group"><p class="info-genre">
+      Genre
       ${hit.comments}</p>
-      <p class="info-item">
-      <b>Downloads</b>
+      <p class="info-year">
+      Year
       ${hit.downloads}</p>
+      </div>
       </div>
       </div>`
     )
