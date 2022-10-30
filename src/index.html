@@ -4,24 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>goit-js-hw-11</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./scss/index.scss" />
   </head>
   <body>
     <!-- Форма поиска -->
     <header class="head">
-      <form class="search-form" id="search-form">
-        <input
-          type="text"
-          name="searchQuery"
-          autocomplete="off"
-          placeholder="Search images..."
-        />
-        <button class="submit-button" type="submit">Search</button>
-      </form>
+      <div class="section">
+        <a class="head__logo" href="/">
+          <svg width="24" height="24">
+            <use href="./svg/sprite.svg#icon-film"></use>
+          </svg>
+          <span class="logo-text">Filmoteca</span>
+        </a>
+        <button type="button" class="button-style home">Home</button>
+        <button type="button" class="button-style library">My library</button>
+
+        <form class="search-form" id="search-form">
+          <input
+            type="text"
+            name="searchQuery"
+            autocomplete="off"
+            placeholder="Search movies..."
+          />
+          <button class="submit-button" type="submit">
+            <svg width="12" height="12">
+              <use href="./svg/sprite.svg#icon-search"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
     </header>
-    <!-- Карточки изображений -->
-    <div class="gallery"></div>
-    <button type="button" class="load-more is-hidden">Load more</button>
+
+    <main>
+      <!-- Карточки изображений -->
+      <div class="gallery section"></div>
+      <button type="button" class="load-more is-hidden">Load more</button>
+    </main>
+    <footer></footer>
     <script type="module" src="./index.js"></script>
   </body>
 </html>
