@@ -4,27 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>goit-js-hw-11</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./scss/index.scss" />
   </head>
   <body>
     <!-- Форма поиска -->
     <header class="head">
       <div class="section">
-        <a class="head__logo" href="/">
-          <svg width="24" height="24">
-            <use href="./svg/sprite.svg#icon-film"></use>
-          </svg>
-          <span class="logo-text">Filmoteca</span>
-        </a>
-        <button type="button" class="button-style home">Home</button>
-        <button type="button" class="button-style library">My library</button>
-
+        <div class="head__links">
+          <a class="head__logo" href="/">
+            <svg width="24" height="24">
+              <use href="./svg/sprite.svg#icon-film"></use>
+            </svg>
+            <span class="logo__text">Filmoteca</span>
+          </a>
+          <button type="button" class="head__button--style home">Home</button>
+          <button type="button" class="head__button--style library">
+            My library
+          </button>
+        </div>
         <form class="search-form" id="search-form">
           <input
             type="text"
             name="searchQuery"
             autocomplete="off"
-            placeholder="Search movies..."
+            placeholder="Movie search"
           />
           <button class="submit-button" type="submit">
             <svg width="12" height="12">
@@ -32,6 +41,7 @@
             </svg>
           </button>
         </form>
+        <p class="notification"></p>
       </div>
     </header>
 
