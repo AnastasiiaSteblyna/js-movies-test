@@ -9,21 +9,15 @@ export function renderGallery(data) {
     .map(
       hit =>
         `<div class="photo-card">
-      
-        <a class="photo" href=${hit.largeImageURL} >
-           <img  src=${hit.webformatURL} alt="${hit.tags}" loading="lazy" title="${hit.tags}"/></a>
-      <div class="info">
+      <a class="photo" href=${hit.largeImageURL} >
+      <img  src=${hit.webformatURL} alt="${hit.tags}" loading="lazy" title="${hit.tags}"/></a>
+      <div class="info">  
       <p class="info-name">
       Film name ${hit.views}</p>
-      <div class="info-group"><p class="info-genre">
-      Genre
-      ${hit.comments}</p>
-      <p class="info-year">
-      Year
-      ${hit.downloads}</p>
+      <p class="info-genre-year"> Genre ${hit.comments} | Year </p>
+      <span class="info-rating">${hit.downloads} </span>
       </div>
-      </div>
-      </div>`
+        </div>`
     )
     .join('');
   refs.galleryContainer.insertAdjacentHTML('beforeend', markup);

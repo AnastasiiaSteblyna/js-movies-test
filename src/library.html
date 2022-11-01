@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./scss/index.scss" />
   </head>
   <body>
-    <header class="head">
+    <header class="head__library">
       <div class="section">
         <div class="head__nav">
           <a class="head__logo" href="/">
@@ -23,30 +23,19 @@
             <span class="logo__text">Filmoteka</span>
           </a>
           <div>
-            <a class="head__link--home current home" href="./index.html"
-              >Home</a
+            <a class="head__link--home home" href="./index.html">Home</a>
+            <a
+              class="head__link--library current library"
+              href="./library.html"
             >
-            <a class="head__link--library library" href="./library.html">
               My library
             </a>
           </div>
         </div>
-        <form class="search-form" id="search-form">
-          <input
-            type="text"
-            name="searchQuery"
-            autocomplete="off"
-            placeholder="Movie search"
-          />
-          <button class="submit-button" type="submit">
-            <svg width="12" height="12">
-              <use href="./svg/sprite.svg#icon-search"></use>
-            </svg>
-          </button>
-        </form>
-        <p class="notification">
-          Search result not successful. Enter the correct movie name and
-        </p>
+        <div class="library__buttons">
+          <button type="button" class="watched">Watched</button>
+          <button type="button" class="queue">Queue</button>
+        </div>
       </div>
     </header>
 

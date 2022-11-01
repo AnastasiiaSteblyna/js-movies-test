@@ -73,6 +73,72 @@
   }
 }
 
+.head__library {
+  margin: 0 auto;
+  max-width: 480px;
+
+  padding-top: 40px;
+  padding-bottom: 44px;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.56) 40%,
+      rgba(0, 0, 0, 0.56) 40%
+    ),
+    url(../jpg/library-mob-min.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #2f303a;
+
+  @include retina {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.56) 40%,
+        rgba(0, 0, 0, 0.56) 40%
+      ),
+      url(../jpg/library-mob@2x-min.jpg);
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.56) 40%,
+        rgba(0, 0, 0, 0.56) 40%
+      ),
+      url(../jpg/library-tab-min.jpg);
+
+    @include retina {
+      background-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.56) 40%,
+          rgba(0, 0, 0, 0.56) 40%
+        ),
+        url(../jpg/library-tab@2x-min.jpg);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1280px;
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.56) 40%,
+        rgba(0, 0, 0, 0.56) 40%
+      ),
+      url(../jpg/library-desktop-min.jpg);
+
+    @include retina {
+      background-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.56) 40%,
+          rgba(0, 0, 0, 0.56) 40%
+        ),
+        url(../jpg/library-desktop@2x-min.jpg);
+    }
+  }
+}
+
 .search-form {
   margin-left: 20px;
   margin-right: 20px;
@@ -146,6 +212,7 @@ input {
 }
 
 .head__link--home {
+  position: relative;
   margin: 0px 40px 0px 0px;
   padding: 0;
   border-style: none;
@@ -159,6 +226,7 @@ input {
 }
 
 .head__link--library {
+  position: relative;
   margin: 0;
   padding: 0;
   border-style: none;
@@ -182,4 +250,17 @@ input {
   @media screen and (min-width: 768px) {
     text-align: center;
   }
+}
+
+.current::after {
+  content: '';
+  position: absolute;
+  display: block;
+  bottom: -5px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 3px;
+  background-color: red;
 }
