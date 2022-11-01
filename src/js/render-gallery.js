@@ -14,8 +14,8 @@ export function renderGallery(data) {
       <div class="info">  
       <p class="info-name">
       Film name ${hit.views}</p>
-      <p class="info-genre-year"> Genre ${hit.comments} | Year </p>
-      <span class="info-rating">${hit.downloads} </span>
+      <p class="info-genre-year"> Genre ${hit.comments} | Year <span class="info-rating">${hit.downloads} </span></p>
+      
       </div>
         </div>`
     )

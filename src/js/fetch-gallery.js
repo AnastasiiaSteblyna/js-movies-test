@@ -12,7 +12,7 @@ export default class ApiService {
   async fetchGallery() {
     try {
       const data = await axios.get(
-        `https://pixabay.com/api/?key=30799489-f6e21edc3306eb9c86baf04e6&q=${this.searchQuery}&image_type=photo&orientation=horizontal&safesearch=true&page=${this.page}&per_page=40`
+        `https://pixabay.com/api/?key=30799489-f6e21edc3306eb9c86baf04e6&q=${this.searchQuery}&image_type=photo&orientation=horizontal&safesearch=true&page=${this.page}&per_page=20`
       );
 
       if (data.data.total === 0 || this.searchQuery === '') {
