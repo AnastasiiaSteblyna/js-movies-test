@@ -78,7 +78,7 @@
   max-width: 480px;
 
   padding-top: 40px;
-  padding-bottom: 44px;
+  padding-bottom: 60px;
 
   background-image: linear-gradient(
       to right,
@@ -140,18 +140,14 @@
 }
 
 .search-form {
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 16px;
+  margin: 54px 20px 16px 20px;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid white;
 
   @media screen and (min-width: 768px) {
     max-width: 336px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
+    margin: 40px auto 20px auto;
   }
   @media screen and (min-width: 768px) {
     max-width: 394px;
@@ -182,9 +178,8 @@ input {
 
 .head__nav {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-around;
-  margin-bottom: 54px;
 
   @media screen and (min-width: 1280px) {
     justify-content: space-between;
@@ -266,6 +261,7 @@ input {
 }
 
 .library__buttons {
+  margin-top: 40px;
   display: flex;
   justify-content: center;
   gap: 20px;
